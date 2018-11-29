@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FLASK APP</title>
+  </head>
+  <body>
+    {% if name %}
+      <h1 style="color:red;">Hello, {{name}}</h1>
+    {% else %}
+      <h1>Hello, no_name</h1>
+    {% endif %}
+    <br>
+    <a href="/">Back</a>
+  </body>
+</html>

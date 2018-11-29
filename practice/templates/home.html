@@ -7,5 +7,25 @@
   <body>
     <h1>HOME</h1><br>
     <a href="./link1">LINK1</a>
+    <a href="./user/practice">USER</a>
+    <br>
+    <button id="getData" type="button" name="button">GET DATA</button><br>
+    <br>
+    <p> user_name1: <span class="user_name1">-</span></p>
+    <p> user_name2: <span class="user_name2">-</span></p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#getData").click(function() {
+          $.getJSON("/people", function(data) {
+            console.log(data);
+
+            $('.user_name1').text(data.user_name1);
+            $('.user_name2').text(data.user_name2);
+          })
+        })
+      })
+    </script>
   </body>
 </html>
